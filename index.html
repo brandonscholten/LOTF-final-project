@@ -122,10 +122,51 @@
             </div>
         </div>
         <div class="row" id="chapter-5-row">
-
+            <div class="col" id="choice-5">
+                <p id="noCall">A meeting is called to discuss how the group is doing.</p>
+                <p id="call">You call a meeting to discuss how the group is doing.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterFiveOne()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-5-1">
+                <p>It becomes apparent that the group is worried about a beast that is speculated to have been lurking in the forest. Is it more important to slay the beast or keep the signal fire going?</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterFiveTwo(true)">Keep the fire going</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterFiveTwo(false)">Slay the beast</button>
+                </div>
+            </div>
+            <div class="col" id="choice-5-2">
+                <p>The hunters break away from the group to do their chant</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterFiveEnd(true)">Join the hunters</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterFiveEnd(false)">Stay behind</button>
+                </div>
+            </div>
         </div>
         <div class="row" id="chapter-6-row">
-
+            <div class="col" id="choice-6">
+                <p>You are aoken to the sound of the conch. During the meeting the firewatchers tell a frightening narrative about their near encounter with the beast. Hysteria sets in among the group. It is suggested that there should be an expedition to find the beast.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixOne(true)">Join the expedition</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixOne(false)">Stay behind</button>
+                </div>
+            </div>
+            <div class="col" id="choice-6-1">
+                <p>There's one part of the island that hasn't been explored. If there is a beast its possible that it's home is in an unexplored area.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixTwo(true)">Go to the unexplored area</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixTwo(false)">Stick to familiar land</button>
+                </div>
+            </div>
+            <div class="col" id="choice-6-2">
+                <p>You feel brave WOWIE!</p>
+                <p>The group finds a cave while exploring this new area of the island. There appears to be no beast inside the cave.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixFort()">This would be a cool place for a fort</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixRegroup()">Go back to the beach and regroup with the others</button>
+                </div>
+            </div>
         </div>
         <div class="row" id="chapter-7-row">
 

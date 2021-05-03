@@ -7,6 +7,10 @@ var piggyCounter = 0;
 //chapter one booleans for chapter two intro
 var chapterTwoReturn = false;
 var chapterTwoAwait = false;
+//booleans to determine who calls the meeting in chapter five
+//these are set in chapters three and four
+chapterThreeWork = false;
+chapterFourBeach = false;
 //function to hide all elements on the screen
 function hideAll(){
     document.getElementById('start-window').style.display = 'none';
@@ -23,6 +27,12 @@ function hideAll(){
     document.getElementById('choice-4').style.display = 'none';
     document.getElementById('choice-4-1').style.display = 'none';
     document.getElementById('choice-4-2').style.display = 'none';
+    document.getElementById('choice-5').style.display = 'none';
+    document.getElementById('choice-5-1').style.display = 'none';
+    document.getElementById('choice-5-2').style.display = 'none';
+    document.getElementById('choice-6').style.display = 'none';
+    document.getElementById('choice-6-1').style.display = 'none';
+    document.getElementById('choice-6-2').style.display = 'none';
 }
 //functions
 function valueCheck(){
@@ -59,8 +69,21 @@ function chapterFour(){
     document.getElementById('choice-4').style.display = 'block';
     document.getElementById('piggy-slap').style.display = 'none';
 }
-function chapterFice(){
-    console.log('nothing here yet');
+function chapterFive(){
+    //show choice column
+    document.getElementById('choice-5').style.display = 'block';
+    //hide intro paragraphs
+    document.getElementById('call').style.display = 'none';
+    document.getElementById('noCall').style.display = 'none';
+    //show correct paragraph
+    if (chapterThreeWork && chapterFourBeach){
+        document.getElementById('call').style.display = 'block';
+    } else {
+        document.getElementById('noCall').style.display = 'block';
+    }
+}
+function chapterSix(){
+    document.getElementById('choice-6').style.display = 'block';
 }
 //main program
 //start by hiding all elements
@@ -161,10 +184,13 @@ function chapterThreeCounter(hunting, huts, explore){
     //cleanup and run the next chapter
     if (hunting){
         jackCounter = jackCounter + 1;
+        chapterThreeWork = true;
     } else if (huts) {
         ralphCounter = ralphCounter + 1;
+        chapterThreeWork = true;
     } else if (explore){
         simonCounter = simonCounter + 1;
+        chapterThreeWork = true;
     }
     hideAll();
     chapterFour();
@@ -189,12 +215,74 @@ function chapterFourTwo(){
     ralphCounter = ralphCounter + 1;
     piggyCounter = piggyCounter + 1;
     var largestValue = valueCheck();
-    if (largestValue == 'piggy'){document.getElementById('piggy-slap').style.display = 'blcok';}
+    if (largestValue == 'piggy'){document.getElementById('piggy-slap').style.display = 'block';}
+    chapterFourBeach = true;
 }
 function chpaterFourHunt(){
     //add point to jack counter
     //run chapter clearnup
     jackCounter = jackCounter +1;
     chapterFourCleanup();
+}
+//----end of chapter----
+//----Chapter 5----
+//onclick functions
+function chapterFiveOne(){
+    document.getElementById('choice-5-1').style.display = 'block';
+}
+function chapterFiveTwo(fire){
+    if (fire){
+        ralphCounter = ralphCounter + 1;
+    } else {
+        jackCounter = jackCounter + 1;
+    }
+    document.getElementById('choice-5-2').style.display = 'block';
+}
+function chapterFiveEnd(follow){
+    if (follow){
+        jackCounter = jackCounter + 1;
+    } else {
+        ralphCounter = ralphCounter + 1;
+        simonCounter = simonCounter + 1;
+        piggyCounter = piggyCounter + 1;
+    }
+    hideAll();
+    chapterSix();
+}
+//----end of chapter----
+//----Chapter 6----
+function chapterSixCleanUp(){
+    hideAll();
+    chapterSeven();
+}
+//onclick functions
+function chapterSixOne(join){
+    if (join){
+        ralphCounter = ralphCounter + 1;
+        jackCounter = jackCounter + 1;
+        simonCounter = simonCounter + 1;
+    } else {
+        piggyCounter = piggyCounter + 1;
+        //TODO: add ending here
+    }
+    document.getElementById('choice-6-1').style.display = 'block';
+}
+function chapterSixTwo(go){
+    if (go){
+        ralphCounter = ralphCounter + 1;
+        jackCounter = jackCounter + 1;
+        document.getElementById('choice-6-2').style.display = 'block';
+    } else {
+        simonCounter = simonCounter + 1;
+        chapterSixCleanUp();
+    }
+}
+function chapterSixFort(){
+    jackCounter = jackCounter + 1;
+    chapterSixCleanUp();
+}
+function chapterSixRegroup(){
+    ralphCounter = ralphCounter + 1;
+    chapterSixCleanUp();
 }
 //----end of chapter----
