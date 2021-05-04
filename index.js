@@ -33,6 +33,13 @@ function hideAll(){
     document.getElementById('choice-6').style.display = 'none';
     document.getElementById('choice-6-1').style.display = 'none';
     document.getElementById('choice-6-2').style.display = 'none';
+    document.getElementById('choice-7').style.display = 'none';
+    document.getElementById('choice-7-1').style.display = 'none';
+    document.getElementById('choice-7-2').style.display = 'none';
+    document.getElementById('choice-7-3').style.display = 'none';
+    document.getElementById('choice-7-4').style.display = 'none';
+    document.getElementById('choice-7-5').style.display = 'none';
+    document.getElementById('choice-7-6').style.display = 'none';
 }
 //functions
 function valueCheck(){
@@ -84,6 +91,9 @@ function chapterFive(){
 }
 function chapterSix(){
     document.getElementById('choice-6').style.display = 'block';
+}
+function chapterSeven(){
+    document.getElementById('choice-7').style.display = 'block';
 }
 //main program
 //start by hiding all elements
@@ -218,7 +228,7 @@ function chapterFourTwo(){
     if (largestValue == 'piggy'){document.getElementById('piggy-slap').style.display = 'block';}
     chapterFourBeach = true;
 }
-function chpaterFourHunt(){
+function chapterFourHunt(){
     //add point to jack counter
     //run chapter clearnup
     jackCounter = jackCounter +1;
@@ -286,3 +296,40 @@ function chapterSixRegroup(){
     chapterSixCleanUp();
 }
 //----end of chapter----
+//----Chapter 7----
+//onclick functions
+function chapterSevenOne(){
+    document.getElementById('choice-7-1').style.display = 'block';
+}
+function chapterSevenNotify(){
+    jackCounter = jackCounter + 1;
+    document.getElementById('choice-7-2').style.display = 'block';
+}
+function chapterSevenThree(){
+    document.getElementById('choice-7-3').style.display = 'block';
+}
+function chapterSevenFour(go){
+    if (go){simonCounter = simonCounter + 1;}
+    document.getElementById('choice-7-4').style.display = 'block';
+}
+function chapterSevenFive(go, wait){
+    if (go){
+        jackCounter = jackCounter + 1;
+    } else if (wait){
+        ralphCounter = ralphCounter + 1;
+    }
+    document.getElementById('choice-7-5').style.display = 'block';
+}
+function chapterSevenSix(go, send){
+    if (go){
+        jackCounter = jackCounter + 1;
+    } else if (send){
+        ralphCounter = ralphCounter + 1;
+    }
+    document.getElementById('choice-7-6').style.display = 'block';
+}
+function chapterSevenEnd(){
+    hideAll();
+    chapterEight();
+}
+//---end of chapter----
