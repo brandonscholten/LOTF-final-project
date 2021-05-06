@@ -40,6 +40,16 @@ function hideAll(){
     document.getElementById('choice-7-4').style.display = 'none';
     document.getElementById('choice-7-5').style.display = 'none';
     document.getElementById('choice-7-6').style.display = 'none';
+    document.getElementById('choice-8').style.display = 'none';
+    document.getElementById('choice-8-1').style.display = 'none';
+    document.getElementById('choice-8-2').style.display = 'none';
+    document.getElementById('choice-8-3').style.display = 'none';
+    document.getElementById('choice-8-4').style.display = 'none';
+    document.getElementById('choice-8-5').style.display = 'none';
+    document.getElementById('choice-8-6').style.display = 'none';
+    document.getElementById('choice-8-7').style.display = 'none';
+    document.getElementById('choice-8-8').style.display = 'none';
+    document.getElementById('choice-8-9').style.display = 'none';
 }
 //functions
 function valueCheck(){
@@ -94,6 +104,9 @@ function chapterSix(){
 }
 function chapterSeven(){
     document.getElementById('choice-7').style.display = 'block';
+}
+function chapterEight(){
+    document.getElementById('choice-8').style.display = 'block';
 }
 //main program
 //start by hiding all elements
@@ -332,4 +345,43 @@ function chapterSevenEnd(){
     hideAll();
     chapterEight();
 }
-//---end of chapter----
+//----end of chapter----
+//----Chapter 8----
+//get character
+//onclick functions
+function chapterEightOne(){
+    if (valueCheck() == 'Jack'){
+        document.getElementById('choice-8-1').style.display = 'block';
+    } else {
+        document.getElementById('choice-8-5').style.display = 'block';
+    }
+}
+function chapterEightTwo(){
+    document.getElementById('choice-8-2').style.display = 'block';
+}
+function chapterEightThree(){
+    document.getElementById('choice-8-3').style.display = 'block';
+}
+function chapterEightFour(){
+    document.getElementById('choice-8-4').style.display = 'block';
+}
+function chapterEightSix(){
+    document.getElementById('choice-8-6').style.display = 'block';
+}
+function chapterEightSeven(){
+    if (valueCheck() == 'Ralph'){
+        document.getElementById('choice-8-7').style.display = 'block';
+    } else if (valueCheck() == 'Piggy'){
+        document.getElementById('choice-8-8').style.display = 'block';
+    } else {
+        console.log('nothing written for Simon yet');
+    }
+}
+function chpaterEightNine(){
+    document.getElementById('choice-8-9').style.display = 'block';
+}
+function chapterEightEnd(){
+    hideAll();
+    chpaterNine();
+}
+//----end of chapter----
