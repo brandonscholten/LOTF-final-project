@@ -50,6 +50,17 @@ function hideAll(){
     document.getElementById('choice-8-7').style.display = 'none';
     document.getElementById('choice-8-8').style.display = 'none';
     document.getElementById('choice-8-9').style.display = 'none';
+    document.getElementById('choice-9').style.display = 'none';
+    document.getElementById('choice-9-1').style.display = 'none';
+    document.getElementById('choice-9-2').style.display = 'none';
+    document.getElementById('choice-9-3').style.display = 'none';
+    document.getElementById('choice-9-4').style.display = 'none';
+    document.getElementById('choice-9-5').style.display = 'none';
+    document.getElementById('choice-9-6').style.display = 'none';
+    document.getElementById('choice-9-7').style.display = 'none';
+    document.getElementById('choice-9-8').style.display = 'none';
+    document.getElementById('choice-9-9').style.display = 'none';
+    document.getElementById('choice-9-10').style.display = 'none';
 }
 //functions
 function valueCheck(){
@@ -107,6 +118,15 @@ function chapterSeven(){
 }
 function chapterEight(){
     document.getElementById('choice-8').style.display = 'block';
+}
+function chpaterNine(majority){
+    if (majority == 'Jack'){
+        document.getElementById('choice-9').style.display = 'block';
+    } else if (majority == 'Simon'){
+        document.getElementById('choice-9-7').style.display = 'block';
+    } else {
+        document.getElementById('choice-9-3').style.display = 'block';
+    }
 }
 //main program
 //start by hiding all elements
@@ -382,6 +402,37 @@ function chpaterEightNine(){
 }
 function chapterEightEnd(){
     hideAll();
-    chpaterNine();
+    chpaterNine(valueCheck());
+}
+//----end of chapter----
+//----Chapter 9----
+//onclick functions
+function chapterNineEnd(){ //TOBO: build simon ending
+    hideAll();
+    chapterTen(); 
+}
+function chapterNineOne(){
+    document.getElementById('choice-9-1').style.display = 'block';
+}
+function chapterNineTwo(){
+    document.getElementById('choice-9-2').style.display = 'block';
+}
+function chapterNineEight(){
+    document.getElementById('choice-9-8').style.display = 'block';
+}
+function chapterNineNine(){
+    document.getElementById('choice-9-9').style.display = 'block';
+}
+function chapterNineTen(){
+    document.getElementById('choice-9-10').style.display = 'block';
+}
+function chapterNineFour(){
+    document.getElementById('choice-9-4').style.display = 'block';
+}
+function chapterNineFive(){
+    document.getElementById('choice-9-5').style.display = 'block';
+}
+function chapterNineSix(){
+    document.getElementById('choice-9-6').style.display = 'block';
 }
 //----end of chapter----
