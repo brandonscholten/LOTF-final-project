@@ -9,8 +9,18 @@ var chapterTwoReturn = false;
 var chapterTwoAwait = false;
 //booleans to determine who calls the meeting in chapter five
 //these are set in chapters three and four
-chapterThreeWork = false;
-chapterFourBeach = false;
+var chapterThreeWork = false;
+var chapterFourBeach = false;
+//booleans for the first loop in chpater ten
+//variables are set in chapter ten
+var chapterTenPunish = false;
+var chapterTenAssign = false;
+var chapterTenHunt = false;
+var chapterTenExplain = false;
+//variables specifically for the rock paper scissors game 
+var rock = false;
+var paper = false;
+var scissors = false;
 //function to hide all elements on the screen
 function hideAll(){
     document.getElementById('start-window').style.display = 'none';
@@ -61,6 +71,25 @@ function hideAll(){
     document.getElementById('choice-9-8').style.display = 'none';
     document.getElementById('choice-9-9').style.display = 'none';
     document.getElementById('choice-9-10').style.display = 'none';
+    document.getElementById('choice-10').style.display = 'none';
+    document.getElementById('choice-10-1').style.display = 'none';
+    document.getElementById('choice-10-2').style.display = 'none';
+    document.getElementById('choice-10-3').style.display = 'none';
+    document.getElementById('choice-10-4').style.display = 'none';
+    document.getElementById('choice-10-5').style.display = 'none';
+    document.getElementById('choice-10-6').style.display = 'none';
+    document.getElementById('choice-10-7').style.display = 'none';
+    document.getElementById('choice-10-8').style.display = 'none';
+    document.getElementById('choice-10-9').style.display = 'none';
+    document.getElementById('choice-10-10').style.display = 'none';
+    document.getElementById('choice-10-11').style.display = 'none';
+    document.getElementById('choice-10-12').style.display = 'none';
+    document.getElementById('choice-10-13').style.display = 'none';
+    document.getElementById('choice-10-14').style.display = 'none';
+    document.getElementById('choice-10-15').style.display = 'none';
+    document.getElementById('choice-10-16').style.display = 'none';
+    document.getElementById('choice-10-17').style.display = 'none';
+    document.getElementById('choice-10-18').style.display = 'none';
 }
 //functions
 function valueCheck(){
@@ -126,6 +155,20 @@ function chpaterNine(majority){
         document.getElementById('choice-9-7').style.display = 'block';
     } else {
         document.getElementById('choice-9-3').style.display = 'block';
+    }
+}
+function chapterTen(){
+    //hide all extra paragraphs
+    document.getElementById('punishment').style.display = 'none';
+    document.getElementById('chapterTenPiggyDenial').style.display = 'none';
+    document.getElementById('chapterTenRalphRemorse').style.display = 'none';
+    document.getElementById('chapterTenPiggyJumped').style.display = 'none';
+    document.getElementById('chapterTenRalphJumped').style.display = 'none';
+    //show elements based on highest point value
+    if (valueCheck() == 'Jack'){
+        document.getElementById('choice-10').style.display = 'block';
+    } else {
+        document.getElementById('choice-10-13').style.display = 'block';
     }
 }
 //main program
@@ -397,7 +440,7 @@ function chapterEightSeven(){
         console.log('nothing written for Simon yet');
     }
 }
-function chpaterEightNine(){
+function chapterEightNine(){
     document.getElementById('choice-8-9').style.display = 'block';
 }
 function chapterEightEnd(){
@@ -434,5 +477,182 @@ function chapterNineFive(){
 }
 function chapterNineSix(){
     document.getElementById('choice-9-6').style.display = 'block';
+}
+//----end of chapter----
+//----Chapter 10----
+function chapterTenFirstLoop(){
+    //hide all options
+    document.getElementById('firstLoopPunish').style.display = 'none';
+    document.getElementById('firstLoopAssign').style.display = 'none';
+    document.getElementById('firstLoopHunt').style.display = 'none';
+    //only show options that are false
+    //if all elements are true show 10-5, otherwise do nothing
+    if (chapterTenPunish == false){
+        document.getElementById('firstLoopPunish').style.display = 'block';
+    } else if (chapterTenAssign == false){
+        document.getElementById('firstLoopAssign').style.display = 'block';
+    } else if (chapterTenHunt == false){
+        document.getElementById('firstLoopHunt').style.display = 'block';
+    } else if ((chapterTenPunish)&&(chapterTenAssign)&&(chapterTenHunt)){
+        document.getElementById('choice-10-5').style.display = 'block';
+    }
+}
+function chapterTenEnd(){
+    hideAll();
+    chapterEleven();
+}
+//onclick functions
+function chapterTenOne(){
+    document.getElementById('choice-10-1').style.display = 'block';
+}
+function chapterTenTwo(punish, assign, hunt){
+    //make sure punishment paragraph in 10-2 is hidden (to be shown onsubmit)
+    document.getElementById('punishment').style.display = 'none';
+    //make sure 10-2, 10-3, and 10-4 are hidden
+    document.getElementById('choice-10-2').style.display = 'none';
+    document.getElementById('choice-10-3').style.display = 'none';
+    document.getElementById('choice-10-4').style.display = 'none';
+    //show choice-10-1 (no harm done on first run when its already visible)
+    document.getElementById('choice-10-1').style.display = 'block';
+    //run chpaterTenFirstLoop function to elminate used options or move to next question
+    chapterTenFirstLoop(); 
+    //if a parameter is set to true, flip its corresponding boolean to true, hide choice-10-1, and then show its corresponding scinerio
+    if (punish){
+        chapterTenPunish = true;
+        document.getElementById('choice-10-1').style.display = 'none';
+        document.getElementById('choice-10-2').style.display = 'block';
+    } else if (assign){
+        chapterTenAssign = true;
+        document.getElementById('choice-10-1').style.display = 'none';
+        document.getElementById('choice-10-3').style.display = 'block';
+    } else if (hunt){
+        chapterTenHunt = true;
+        document.getElementById('choice-10-1').style.display = 'none';
+        document.getElementById('choice-10-4').style.display = 'block';
+    }
+    //this function should be run again after each subsequent option is displayed (so the continue buttons you're welcome future brandon)
+}
+function chapterTenSix(){
+    document.getElementById('choice-10-6').style.display = 'block';
+}
+function chapterTenSeven(deny){
+    if (deny){
+        document.getElementById('choice-10-7').style.display = 'block';
+        chapterTenExplain = true;
+    } else {
+        document.getElementById('choice-10-8').style.display = 'block';
+    }
+}
+function chapterTenNine(){
+    document.getElementById('choice-10-9').style.display = 'block';
+}
+function chapterTenTen(){
+    if (chapterTenExplain){
+        document.getElementById('choice-10-10').style.display = 'block';
+    } else {
+        document.getElementById('choice-10-11').style.display = 'block';
+    }
+}
+function chapterTenEleven(){
+    document.getElementById('choice-10-11').style.display = 'block';
+}
+function chapterTenTwelve(){
+    document.getElementById('choice-10-12').style.display = 'block';
+    //chapterTenEnd(); this is ran onclick of continue for 10-12
+}
+function chapterTenThirteen(){
+    //hide paragraphs
+    document.getElementById('chapterTenPiggyDenial').style.display = 'none';
+    document.getElementById('chapterTenRalphRemorse').style.display = 'none';
+    //the usual shit
+    document.getElementById('choice-10-13').style.display = 'block';
+    if (valueCheck() == 'Piggy'){
+        document.getElementById('chapterTenPiggyDenial').style.display = 'block';
+    } else if (valueCheck == 'Ralph'){  
+        document.getElementById('chapterTenRalphRemorse').style.display = 'block';
+    }
+}
+function chapterTenFourteen(){
+    document.getElementById('choice-10-14').style.display = 'block';
+}
+function chapterTenFifteen(){
+    document.getElementById('choice-10-15').style.display = 'block';
+}
+function rockPaperScissorsMain(rock, paper, scissors){
+    //main calculation and result for rock paper scissors game
+    var computerSelection = '';
+    var humanSelection = '';
+    //generate computer selection
+    var random = Math.floor(Math.random() * (3 - 1)) + 1;
+    if (random == 1){
+        computerSelection = 'rock';
+    } else if (random == 2){
+        computerSelection = 'paper';
+    } else if (random == 3){
+        computerSelection = 'schissors';
+    }
+    //translate human selection to string
+    if (rock){
+        humanSelection = 'rock';
+    } else if (paper){
+        humanSelection = 'paper';
+    } else if (scissors){
+        humanSelection = 'scissors';
+    }
+    //compare selections and inject output
+    if (humanSelection == computerSelection){
+        document.getElementById('rockPaperScissorsResults').innerHTML = 'you both picked '+computerSelection;
+    } else {
+        if ((computerSelection == 'rock')&&(humanSelection == 'paper')){
+            document.getElementById('rockPaperScissorsResults').innerHTML = 'Your opponent picks rock. You win!';
+        } else if ((computerSelection == 'rock')&&(humanSelection == 'scissors')){
+            document.getElementById('rockPaperScissorsResults').innerHTML = 'Your opponent picks rock. You lose >:(';
+        } else if ((computerSelection == 'paper')&&(humanSelection == 'rock')){
+            document.getElementById('rockPaperScissorsResults').innerHTML = 'Your opponent picks paper. You lose >:(';
+        } else if ((computerSelection == 'paper')&&(humanSelection == 'scissors')){
+            document.getElementById('rockPaperScissorsResults').innerHTML = 'Your opponent picks paper. You win!';
+        } else if ((computerSelection == 'scissors')&&(humanSelection == 'rock')){
+            document.getElementById('rockPaperScissorsResults').innerHTML = 'Your opponent picks scissors. You win!';
+        } else if ((computerSelection == 'scissors')&&(humanSelection == 'paper')){
+            document.getElementById('rockPaperScissorsResults').innerHTML = 'Your opponent picks scissors. You lose >:(';
+        }
+    }
+}
+function rockPaperScissorsCleanup(){
+    //clear the result
+    document.getElementById('rockPaperScissorsResults').innerHTML = '';
+}
+function chapterTenSixteen(){
+    document.getElementById('choice-10-16').style.display = 'block';
+}
+function chapterTenSeventeen(){
+    document.getElementById('choice-10-17').style.display = 'block';
+}
+function chapterTenEighteen(){
+    document.getElementById('choice-10-18').style.display = 'block';
+    //hide paragraphs
+    document.getElementById('chapterTenPiggyJumped').style.display = 'none';
+    document.getElementById('chapterTenRalphJumped').style.display = 'none';
+    //show appropriate paragraph
+    if (valueCheck() == 'Piggy'){
+        document.getElementById('chapterTenPiggyJumped').style.display = 'block';
+    } else {
+        document.getElementById('chapterTenRalphJumped').style.display = 'block';
+    }
+    chapterTenEnd();
+}
+//onsubmit functions
+function nameCave(){
+    //get the value of caveName and insert it into all elements with the ID of insertCaveNameHere
+    document.getElementById('insertCaveNameHere').innerHTML = document.getElementById('caveName').value;
+}
+function beatChild(){
+    //get the value of victimInput and insert it into all elements with the ID of insertVictimHere
+    document.getElementById('insertVictimHere').innerHTML = document.getElementById('victimInput').value;
+    //show punishment paragraph
+    document.getElementById('punishment').style.display = 'block';
+}
+function assignGuards(){
+    console.log('This literally does nothing lmao');
 }
 //----end of chapter----

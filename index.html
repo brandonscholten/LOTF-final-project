@@ -348,7 +348,159 @@
             </div>
         </div>
         <div class="row" id="chapter-10-row">
-
+            <div class="col" id="choice-10">
+                <p>The party was a success. You and everyone who joined you reside together in the cave.</p>
+                <form name="caveNameForm">
+                    <input type="text" class="form-control" placeholder="name the cave" aria-label="caveName" aria-describedby="basic-addon1" id="caveName">
+                    <button type="button" class="btn btn-primary" onclick="nameCave()">Submit</button>
+                </form>
+                <div class="list-group list-gorup-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenOne()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-1">
+                <p>As chief of the hunters you must decide on the next course of actioon to take.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" id="firstLoopPunish" onclick="chapterTenTwo(true, false, false)">Display your power by punishing someone</button>
+                    <button type="button" class="list-group-item list-group-item-action" id="firstLoopAssign" onclick="chapterTenTwo(false, true, true)">Assign guards to <p id="insertCaveNameHere"></p></button>
+                    <button type="button" class="list-group-item list-group-item-action" id="firstLoopHunt" onclick="chapterTenTwo(false, false, true)">Plan a hunt</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-2">
+                <p>No ove has done anything wrong, but you feel like beating someone up.</p>
+                <form name="selectVictimForm">
+                    <input type="text" class="form-control" placeholder="victim" aria-label="victim" aria-describedby="basic-addon1" id="victimInput">
+                    <button type="button" class="btn btn-primary" onclick="beatChild()">Submit</button>
+                </form>
+                <p id="punishment">You order the hunters to take <p id="insertVictimHere"></p> and tie them to a rock. You begin a furious series of blows until you are satisfied.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenTwo(false, false, false)">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-3">
+                <p>A fortress needs guards. You decide to assign two people to guard to cave.</p>
+                <form name="selectGuardForm">
+                    <input type="text" class="form-control" placeholder="guard 1" aria-label="guard_1" aria-describedby="basic-addon1" name="guard_1">
+                    <input type="text" class="form-control" placeholder="guard 2" aria-label="guard_2" aria-describedby="basic-addon1" name="guard_2">
+                    <button type="button" class="btn btn-primary" onclick="assignGuards()">Submit</button>
+                </form>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenTwo(false, false, false)">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-4">
+                <p>Your tribe needs food, and more importantly the satisfaction of the hunt. You gather a few boys and head into the depths of the island. After skewering another pig you return to the cave.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenTwo(false, false, false)">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-5">
+                <p>Rather ironically, you call the a tribal meeting.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenSix()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-6">
+                <p>During the meeting a sort of unease sets in. Your tribe is still expressing concern about the beast.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenSeven(true)">Attempt to explain</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenSeven(false)">Make an example of the first boy who spoke out</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-7">
+                <p>You tell everyone that it was impossible to kill the beast. You say that the beast was able to turn into one of the boys and you only killed part of the beast. Eveyone seems to accept this explanation with little hesitation.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenNine()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-8">
+                <p>They boy who spoke out suffers the same fate as <p id="insertVictimHere"></p>. The others are too fearful to dare act out again. After all, the beast is dead and no one would dare object to this conclusion.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenNine()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-9">
+                <p>The meeting continues...</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenTen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-10">
+                <p>Another member of the tribe speaks up about the signal fire. You brush them off and continue with your speech.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenEleven()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-11">
+                <p>You quickly realize that without fire, you won't be able to cook any more meat. You decide to send two of the strongest boys in the group to raid the outcasts for fire.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenTwelve()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-12">
+                <p>You reach the old shelters. You and the two boys you brought along smash through the poorly built structures looking for the weirdo with glasses. Eventually you aquire what you came for and leave to return to <p id="insertCaveNameHere"></p>.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenEnd()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-13">
+                <p>With just the two of you on the outside of the new group, everything feels empty. You reflect on last night's events.</p>
+                <p id="chapterTenPiggyDenial">There has to be a rational reason for this. Yes, a boy died but it was a mistake. They were absolutely convinced it was in fact the beast.</p>
+                <p id="chapterTenRalphRemorse">Murder... We are murders now. Last night an atrocity was committed but no one wants to admit it.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenFourteen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-14">
+                <p>The two of you decide to do something to pass the time.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenFifteen()">Rock paper scissors</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenSixteen()">Random trivia</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-15">
+                <div id="rockPaperScissors">
+                    <p>Three! Two! One! Go!</p>
+                    <div class="list-group list-group-flush">
+                        <button type="button" class="list-group-item list-group-item-action" onclick="rockPaperScissorsMain(true, false, false)">rock</button>
+                        <button type="button" class="list-group-item list-group-item-action" onclick="rockPaperScissorsMain(false, true, false)">paper</button>
+                        <button type="button" class="list-group-item list-group-item-action" onclick="rockPaperScissorsMain(false, false, true)">scissors</button>
+                    </div>
+                    <div id="resultsDiv">
+                        <p>Results:</p>
+                        <p id="rockPaperScissorsResults"></p>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <button type="button" class="list-group-item list-group-item-action" onclick="rockPaperScissorsCleanup()">play again</button>
+                    </div>
+                    <br>
+                    <br>  
+                </div>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenSeventeen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-16">
+                <div id="triviaEmbed">
+                    <div class="embed-fungen"> <script src="https://fungenerators.com/extensions/embed/v1/fungen.js"></script> <script> FunGen.Embed.render( { context: 'random', toolId: 'trivia' } ); </script> <noscript>Please enable JavaScript to view the <a href="https://fungenerators.com/random/trivia">Random Trivia Generator from fungenerators.com.</a></noscript> <div class="light-text" style="text-decoration: none; color:#ccc; text-align: right; padding-right: 20px; margin-top: -20px;"><a href="https://fungenerators.com/random/trivia" title="Powered by Random Trivia Generator from fungenerators.com" style="text-decoration: none; color:#ccc; ">fungenerators.com</a></div> </div>
+                </div>  
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenSeventeen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-17">
+                <p>It's getting dark and you are tired, so you decide to go to the shelters and sleep.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenEighteen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-10-18">
+                <p id="chapterTenPiggyJumped">You hear someone calling your name. The walls of the shelter cave in around you and a flurry of blows from an unknown source further disorient you. Your glasses go missing in the chaos and you are left defenseless.</p>
+                <p id="chapterTenRalphJumped">You hear a name being called. Suddenly the walls of the shelter collapse and you are attacked by an unkown source. The attackers flee with the other boy's glasses which you had been using to start the fire.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterEleven()">Continue</button>
+                </div>
+            </div>
         </div>
         <div class="row" id="chapter-11-row">
 
