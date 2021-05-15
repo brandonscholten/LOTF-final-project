@@ -90,6 +90,28 @@ function hideAll(){
     document.getElementById('choice-10-16').style.display = 'none';
     document.getElementById('choice-10-17').style.display = 'none';
     document.getElementById('choice-10-18').style.display = 'none';
+    document.getElementById('choice-11').style.display = 'none';
+    document.getElementById('choice-11-1').style.display = 'none';
+    document.getElementById('choice-11-2').style.display = 'none';
+    document.getElementById('choice-11-3').style.display = 'none';
+    document.getElementById('choice-11-4').style.display = 'none';
+    document.getElementById('choice-11-5').style.display = 'none';
+    document.getElementById('choice-11-6').style.display = 'none';
+    document.getElementById('choice-11-7').style.display = 'none';
+    document.getElementById('choice-11-8').style.display = 'none';
+    document.getElementById('choice-11-9').style.display = 'none';
+    document.getElementById('choice-11-10').style.display = 'none';
+    document.getElementById('choice-11-11').style.display = 'none';
+    document.getElementById('choice-11-12').style.display = 'none';
+    document.getElementById('choice-11-13').style.display = 'none';
+    document.getElementById('choice-11-14').style.display = 'none';
+    document.getElementById('choice-11-15').style.display = 'none';
+    document.getElementById('choice-11-16').style.display = 'none';
+    document.getElementById('choice-11-17').style.display = 'none';
+    document.getElementById('choice-11-18').style.display = 'none';
+    document.getElementById('choice-11-19').style.display = 'none';
+    document.getElementById('choice-11-20').style.display = 'none';
+    document.getElementById('choice-11-21').style.display = 'none';
 }
 //functions
 function valueCheck(){
@@ -169,6 +191,14 @@ function chapterTen(){
         document.getElementById('choice-10').style.display = 'block';
     } else {
         document.getElementById('choice-10-13').style.display = 'block';
+    }
+}
+function chapterEleven(){
+    //show elements based on highest point value
+    if (valueCheck() == 'Jack'){
+        document.getElementById('choice-11').style.display = 'block';
+    } else {
+        document.getElementById('choice-11-7').style.display = 'block';
     }
 }
 //main program
@@ -655,4 +685,76 @@ function beatChild(){
 function assignGuards(){
     console.log('This literally does nothing lmao');
 }
+//----end of chapter----
+//----Chapter 11----
+function chapterElevenEnd(){
+    hideAll();
+    chapterTwelve();
+}
+//onclick functinns
+function chapterElevenOne(){
+    document.getElementById('choice-11-1').style.display = 'block';
+}
+function chapterElevenTwo(){
+    document.getElementById('choice-11-2').style.display = 'block';
+}
+function chapterElevenThree(){
+    document.getElementById('choice-11-3').style.display = 'block';
+}
+function chapterElevenFour(){
+    document.getElementById('choice-11-4').style.display = 'block';
+}
+function chapterElevenFive(){
+    document.getElementById('choice-11-5').style.display = 'block';
+}
+function chapterElevenSix(){
+    document.getElementById('choice-11-6').style.display = 'block';
+}
+function chapterElevenSeven(){
+    document.getElementById('choice-11-7').style.display = 'block';
+    //TODO add rock paper scissors game
+}
+function chapterElevenEight(){
+    document.getElementById('choice-11-8').style.display = 'block';
+}
+function chapterElevenNine(){
+    document.getElementById('choice-11-9').style.display = 'block';
+}
+function chapterElevenTen(){
+    document.getElementById('choice-11-10').style.display = 'block';
+}
+function chapterElevenEleven(){
+    document.getElementById('choice-11-11').style.display = 'block';
+}
+function chapterElevenTwelve(){
+    if (valueCheck() == "Ralph"){
+        document.getElementById('choice-11-12').style.display = 'block';
+    } else if (valueCheck() == 'Piggy'){
+        document.getElementById('choice-11-18').style.display = 'block';
+    }
+}
+function chapterElevenThirteen(){
+    document.getElementById('choice-11-13').style.display = 'block';
+}
+function chapterElevenFourteen(){
+    document.getElementById('choice-11-14').style.display = 'block';
+}
+function chapterElevenFifteen(){
+    document.getElementById('choice-11-15').style.display = 'block';
+}
+function chapterElevenSixteen(){
+    document.getElementById('choice-11-16').style.display = 'block';
+}
+function chapterElevenSeventeen(){
+    document.getElementById('choice-11-17').style.display = 'block';
+}
+function chapterElevenNineteen(){
+    document.getElementById('choice-11-19').style.display = 'block';
+}
+function chapterElevenTwenty(){
+    document.getElementById('choice-11-20').style.display = 'block';
+}
+function chapterElevenTwentyOne(){
+    document.getElementById('choice-11-20').style.display = 'block';
+} //TODO add piggy ending
 //----end of chapter----

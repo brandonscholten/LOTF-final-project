@@ -372,7 +372,7 @@
                     <input type="text" class="form-control" placeholder="victim" aria-label="victim" aria-describedby="basic-addon1" id="victimInput">
                     <button type="button" class="btn btn-primary" onclick="beatChild()">Submit</button>
                 </form>
-                <p id="punishment">You order the hunters to take <p id="insertVictimHere"></p> and tie them to a rock. You begin a furious series of blows until you are satisfied.</p>
+                <p id="punishment">You order the hunters to take </p> <p id="insertVictimHere"></p> <p id="punishment">and tie them to a rock. You begin a furious series of blows until you are satisfied.</p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenTwo(false, false, false)">Continue</button>
                 </div>
@@ -503,7 +503,142 @@
             </div>
         </div>
         <div class="row" id="chapter-11-row">
-
+            <div class="col" id="choice-11">
+                <p>You, </p><p id="insetHunterOneHere"></p><p> and </p><p id="insertHunterTwoHere"></p><p> are out in the forest hunting. You see a pig and kill it. You and the other carry the dead meat back to </p><p id="insertCaveNameHere"></p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenOne()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-1">
+                <p>As you approach </p><p id="insertCaveNameHere"></p><p> you notice the two outsiders have returned, probably for that weirdo's glasses. You won't comply with their demands. Quite honeslty, you would rather kill them. One of them calls you a theif. You decide that right then that these two outsiders will not be leaving the island alive.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenTwo()">Order them to be captured so you may kill them both at once.</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenThree()">Kill the boy who called you a thief.</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-2">
+                <p>You order your hunters to capture the outsiders. They were almost surrounded when one broke through the hunters. How dare they disobey the will of the beast! You lunge into a fight with the disobediant outsider.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenFour()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-3">
+                <p>You lunge at the boy who dared disrespect you!</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenFour()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-4">
+                <p>A viscous flurry of spear and fist begins. The sound of the boulder interrupts the frenzy. The other outsider has been taken care of, and the conch lies shattered on the rocks. You're power knows no bounds.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-aciton" onclick="chapterElevenFive()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-5">
+                <p>You lose control of yourself. You scream. A scream full of bloodlust and fiery anger towards your enemy. Everyone beigns throwing spears at the remaining outsider and a hunt begins as he flees into the forest.</p>
+                <div class="list-group list-gorup-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenSix()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-6">
+                <p>The tribe catches a pair of twins who were previously with the outsiders. After some intimidation they join you in the hunt.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenEnd()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-7">
+                <p>After the attack things feel hopeless.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenTen()">Attempt to get the glasses back</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenEight()">Rock paper scissors</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenNine()">Attempt to make a fire without the glasses</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-8">
+                <p>It's a bit rediculous to play rock paper scissors right now but here's the game anyways...</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenTen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-9">
+                <p>You try lighting a fire. The effort is hopeless, everything you try fails.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenTen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-10">
+                <p>The only way to rescue is a signal fire, and the only way to get a signal fire is to get back the glasses. It seems unlikely that anything productive will come of this, but its all you can do.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenEleven()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-11">
+                <p>As you approach the other group's fort, you are stopped by two boys holding spears and a large, unwelcoming group behind them.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenTwelve()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-12">
+                <p>You attempt to explain the situation to everyone but you are met with a shower of rocks.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenThirteen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-13">
+                <p>You are asked to leave by a boy who appears to be the leader of this new group. You ask for the glasses and are met with blatant noncompliance. You are outnumbered.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenFourteen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-14">
+                <p>In a moment of hopeless rage you cry out that the boy is a thief. The look on his face is savage as he begins stepping towards you.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenFifteen()">attempt to reason</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenSixteen()">throw the first punch</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-15">
+                <p>You talk of a signal fire, of rescue and society. Your opponent has none of this and lunges forward.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenSeventeen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-16">
+                <p>The rukus begins. There was never going to be a good resolution to this anyways. You knew it deep down this whole time.</p>
+                <div class="list-gorup list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenSeventeen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-17">
+                <p>A viscous flurry of spear and fist begins. The sound of the boulder interrupts the frenzy. Your one remaining comrade has been brutally destroyed and lays in a pool of his own blood and brains. A series of blood curtling shreiks can be heard as spears begin to rush past you at deadly velocities. You run into the forest for your life.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenEnd()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-18">
+                <p>The boy you went along with claims he is going to get your glasses back. You stand, virtually useless. You are blind and very scared.</p>
+                <div class="list-group list-gorup-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenNineteen()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-19">
+                <p>You can hear the tension in the voices of the boys. Violence is breaking out and there's nohting left to do but to yell.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenTwenty()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-20">
+                <p>So you yell. You yell to the blurry mob about how far they have descended into chaos, about how uncivilized everything has become. But it is no use, no hears you, and if they did they certainly wouldn't care.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenTwentyOne()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-11-21">
+                <p>It's over for you. You have been slaughtered in the name of the beast. The boulder crushes your body before you even fall over the ledge. You hit the ground with a crack which sends the contents of your head into the elements. There is no logic here.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="">Continue</button>
+                </div>
+            </div>
         </div>
         <div class="row" id="chapter-12-row">
 
