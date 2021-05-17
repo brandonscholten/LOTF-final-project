@@ -21,7 +21,11 @@ var chapterTenExplain = false;
 var rock = false;
 var paper = false;
 var scissors = false;
+//variables for chapter 12
+var chapterTwelveSpear = false;
 //function to hide all elements on the screen
+//this is fuckiing stupid please ignore the next hundred or so lines of this shit
+//if I get bored this summer I'll re-engineer something cleaner
 function hideAll(){
     document.getElementById('start-window').style.display = 'none';
     document.getElementById('choice-1').style.display = 'none';
@@ -112,6 +116,76 @@ function hideAll(){
     document.getElementById('choice-11-19').style.display = 'none';
     document.getElementById('choice-11-20').style.display = 'none';
     document.getElementById('choice-11-21').style.display = 'none';
+    document.getElementById('choice-12').style.display = 'none';
+    document.getElementById('choice-12-1').style.display = 'none';
+    document.getElementById('choice-12-2').style.display = 'none';
+    document.getElementById('choice-12-3').style.display = 'none';
+    document.getElementById('choice-12-4').style.display = 'none';
+    document.getElementById('choice-12-5').style.display = 'none';
+    document.getElementById('choice-12-6').style.display = 'none';
+    document.getElementById('choice-12-7').style.display = 'none';
+    document.getElementById('choice-12-8').style.display = 'none';
+    document.getElementById('choice-12-9').style.display = 'none';
+    document.getElementById('choice-12-10').style.display = 'none';
+    document.getElementById('choice-12-11').style.display = 'none';
+    document.getElementById('choice-12-12').style.display = 'none';
+    document.getElementById('choice-12-13').style.display = 'none';
+    document.getElementById('choice-12-14').style.display = 'none';
+    document.getElementById('choice-12-15').style.display = 'none';
+    document.getElementById('choice-12-16').style.display = 'none';
+    document.getElementById('choice-12-17').style.display = 'none';
+    document.getElementById('choice-12-18').style.display = 'none';
+    document.getElementById('choice-12-19').style.display = 'none';
+    document.getElementById('choice-12-20').style.display = 'none';
+    document.getElementById('choice-12-21').style.display = 'none';
+    document.getElementById('choice-12-22').style.display = 'none';
+    document.getElementById('choice-12-23').style.display = 'none';
+    document.getElementById('choice-12-24').style.display = 'none';
+    document.getElementById('choice-12-25').style.display = 'none';
+    document.getElementById('choice-12-26').style.display = 'none';
+    document.getElementById('choice-12-27').style.display = 'none';
+    document.getElementById('choice-12-28').style.display = 'none';
+    document.getElementById('choice-12-29').style.display = 'none';
+    document.getElementById('choice-12-30').style.display = 'none';
+    document.getElementById('choice-12-31').style.display = 'none';
+    document.getElementById('choice-12-32').style.display = 'none';
+    document.getElementById('choice-12-33').style.display = 'none';
+    document.getElementById('choice-12-34').style.display = 'none';
+    document.getElementById('choice-12-35').style.display = 'none';
+    document.getElementById('choice-12-36').style.display = 'none';
+    document.getElementById('choice-12-37').style.display = 'none';
+    document.getElementById('choice-12-38').style.display = 'none';
+    document.getElementById('choice-12-39').style.display = 'none';
+    document.getElementById('choice-12-40').style.display = 'none';
+    document.getElementById('choice-12-41').style.display = 'none';
+    document.getElementById('choice-12-42').style.display = 'none';
+    document.getElementById('choice-12-43').style.display = 'none';
+    document.getElementById('choice-12-44').style.display = 'none';
+    document.getElementById('choice-12-45').style.display = 'none';
+    document.getElementById('choice-12-46').style.display = 'none';
+    document.getElementById('choice-12-47').style.display = 'none';
+    document.getElementById('choice-12-48').style.display = 'none';
+    document.getElementById('choice-12-49').style.display = 'none';
+    document.getElementById('choice-12-50').style.display = 'none';
+    document.getElementById('choice-12-51').style.display = 'none';
+    document.getElementById('choice-12-52').style.display = 'none';
+    document.getElementById('choice-12-52').style.display = 'none';
+    document.getElementById('choice-12-53').style.display = 'none';
+    document.getElementById('choice-12-54').style.display = 'none';
+    document.getElementById('choice-12-55').style.display = 'none';
+    document.getElementById('choice-12-56').style.display = 'none';
+    document.getElementById('choice-12-57').style.display = 'none';
+    document.getElementById('choice-12-58').style.display = 'none';
+    document.getElementById('choice-12-59').style.display = 'none';
+    document.getElementById('choice-12-60').style.display = 'none';
+    document.getElementById('choice-12-61').style.display = 'none';
+    document.getElementById('choice-12-62').style.display = 'none';
+    document.getElementById('choice-12-63').style.display = 'none';
+    document.getElementById('choice-12-64').style.display = 'none';
+    document.getElementById('choice-12-65').style.display = 'none';
+    document.getElementById('choice-12-66').style.display = 'none';
+    document.getElementById('choice-12-67').style.display = 'none';
+    document.getElementById('choice-12-68').style.display = 'none';
 }
 //functions
 function valueCheck(){
@@ -122,9 +196,9 @@ function valueCheck(){
     } else if (largest == ralphCounter){
         return 'Ralph';
     } else if (largest == simonCounter){
-        return 'Simon'
+        return 'Simon';
     } else if (largest == piggyCounter){
-        return 'Piggy'
+        return 'Piggy';
     }
 }
 //chapter functions (starting at chapter 2)
@@ -199,6 +273,14 @@ function chapterEleven(){
         document.getElementById('choice-11').style.display = 'block';
     } else {
         document.getElementById('choice-11-7').style.display = 'block';
+    }
+}
+function chapterTwelve(){
+    //show elements based on highest point value
+    if (valueCheck() == 'Jack'){
+        document.getElementById('choice-12').style.display = 'block';
+    } else if (valueCheck() == 'Ralph'){
+        document.getElementById('choice-12-34').style.display = 'block';
     }
 }
 //main program
@@ -757,4 +839,216 @@ function chapterElevenTwenty(){
 function chapterElevenTwentyOne(){
     document.getElementById('choice-11-20').style.display = 'block';
 } //TODO add piggy ending
+//----end of chapter----
+//----Chapter 12----
+//onclick functions
+function chapterTwelveOne(){
+    document.getElementById('choice-12-1').style.display = 'block';
+}
+function chapterTwelveTwo(){
+    document.getElementById('choice-12-2').style.display = 'block';
+}
+function chapterTwelveThree(){
+    document.getElementById('choice-12-3').style.display = 'block';
+}
+function chapterTwelveFour(){
+    document.getElementById('choice-12-4').style.display = 'block';
+}
+function chapterTwelveFive(){
+    document.getElementById('choice-12-5').style.display = 'block';
+}
+function chapterTwelveSix(){
+    document.getElementById('choice-12-6').style.display = 'block';
+}
+function chapterTwelveSeven(){
+    document.getElementById('choice-12-7').style.display = 'block';
+}
+function chapterTwelveEight(){
+    document.getElementById('choice-12-8').style.display = 'block';
+}
+function chapterTwelveNine(){
+    document.getElementById('choice-12-9').style.display = 'block';
+}
+function chapterTwelveTen(){
+    document.getElementById('choice-12-10').style.display = 'block';
+}
+function chapterTwelveEleven(){
+    document.getElementById('choice-12-11').style.display = 'block';
+}
+function chapterTwelveTwelve(){
+    document.getElementById('choice-12-12').style.display = 'block';
+}
+function chapterTwelveThirteen(){
+    document.getElementById('choice-12-13').style.display = 'block';
+}
+function chapterTwelveFourteen(){
+    document.getElementById('choice-12-14').style.display = 'block';
+}
+function chapterTwelveFifteen(){
+    document.getElementById('choice-12-15').style.display = 'block';
+}
+function chapterTwelveSixteen(){
+    document.getElementById('choice-12-16').style.display = 'block';
+}
+function chapterTwelveSeventeen(){
+    document.getElementById('choice-12-17').style.display = 'block';
+}
+function chapterTwelveEighteen(){
+    document.getElementById('choice-12-18').style.display = 'block';
+}
+function chapterTwelveNineteen(){
+    document.getElementById('choice-12-19').style.display = 'block';
+}
+function chapterTwelveTwenty(){
+    document.getElementById('choice-12-20').style.display = 'block';
+}
+function chapterTwelveTwentyOne(){
+    document.getElementById('choice-12-21').style.display = 'block';
+}
+function chapterTwelveTwentyTwo(){
+    //weird thought, the div might show up behind the current div
+    //so it will hide itself after it is shown
+    document.getElementById('choice-12-22').style.display = 'block';
+    document.getElementById('choice-12-23').style.display = 'none';
+}
+function chapterTwelveTwentyThree(){
+    document.getElementById('choice-12-23').style.display = 'block';
+}
+function chapterTwelveTwentyFour(){
+    document.getElementById('choice-12-24').style.display = 'block';
+}
+function chapterTwelveTwentyFive(){
+    document.getElementById('choice-12-25').style.display = 'block';
+}
+function chapterTwelveTwentySix(){
+    //generate a random number 1 or 2
+    var random = Math.floor(Math.random() * (2 - 1)) + 1;
+    if (random == 1){
+        document.getElementById('choice-12-26').style.display = 'block';
+    } else if (random == 2){
+        document.getElementById('choice-12-31').style.display = 'block';
+    }
+}
+function chapterTwelveTwentySeven(){
+    document.getElementById('choice-12-27').style.display = 'block';
+}
+function chapterTwelveTwentyEight(){
+    document.getElementById('choice-12-28').style.display = 'block';
+}
+function chapterTwelveTwentyNine(){
+    document.getElementById('choice-12-29').style.display = 'block';
+}
+function chapterTwelveThirty(){
+    document.getElementById('choice-12-30').style.display = 'block';
+}
+function chapterTwelveThirtyTwo(){
+    document.getElementById('choice-12-32').style.display = 'block';
+}
+function chapterTwelveThirtyThree(){
+    document.getElementById('choice-12-33').style.display = 'block';
+}
+function chapterTwelveThirtyFive(){
+    document.getElementById('choice-12-35').style.display = 'block';
+}
+function chapterTwelveThirtySix(){
+    document.getElementById('choice-12-36').style.display = 'block';
+}
+function chapterTwelveThirtySeven(){
+    document.getElementById('choice-12-37').style.display = 'block';
+}
+function chapterTwelveThirtyEight(){
+    document.getElementById('choice-12-38').style.display = 'block';
+}
+function chapterTwelveThirtyNine(){
+    document.getElementById('choice-12-39').style.display = 'block';
+}
+function chapterTwelveForty(){
+    document.getElementById('choice-12-40').style.display = 'block';
+}
+function chapterTwelveFortyOne(){
+    document.getElementById('choice-12-41').style.display = 'block';
+}
+function chapterTwelveFortyTwo(){
+    document.getElementById('choice-12-42').style.display = 'block';
+    chapterTwelveSpear = true;
+}
+function chapterTwelveFortyThree(){
+    document.getElementById('choice-12-43').style.display = 'block';
+}
+function chapterTwelveFortyFour(){
+    document.getElementById('choice-12-44').style.display = 'block';
+}
+function chapterTwelveFortyFive(){
+    document.getElementById('choice-12-45').style.display = 'block';
+}
+function chpaterTwelveFortySix(){
+    document.getElementById('choice-12-46').style.display = 'block';
+}
+function chapterTwelveFortySeven(){
+    document.getElementById('choice-12-47').style.display = 'block';
+}
+function chapterTwelveFortyEight(){
+    document.getElementById('choice-12-48').style.display = 'block';
+}
+function chapterTwelveFortyNine(){
+    document.getElementById('choice-12-49').style.display = 'block';
+}
+function chapterTwelveFifty(){
+    document.getElementById('choice-12-50').style.display = 'block';
+}
+function chapterTwelveFiftyOne(){
+    document.getElementById('choice-12-51').style.display = 'block';
+}
+function chapterTwelveFiftyTwo(){
+    document.getElementById('choice-12-52').style.display = 'block';
+}
+function chapterTwelveFiftyThree(){
+    document.getElementById('choice-12-53').style.display = 'block';
+}
+function chapterTwelveFiftyFour(){
+    document.getElementById('choice-12-54').style.display = 'block';
+}
+function chapterTwelveFiftyFive(){
+    document.getElementById('choice-12-55').style.display = 'block';
+}
+function chapterTwelveFiftySix(){
+    document.getElementById('choice-12-56').style.display = 'block';
+}
+function chapterTwelveFiftySeven(){
+    document.getElementById('choice-12-57').style.display = 'block';
+}
+function chapterTwelveFiftyEight(){
+    document.getElementById('choice-12-58').style.display = 'block';
+}
+function chapterTwelveFiftyNine(){
+    document.getElementById('choice-12-59').style.display = 'block';
+}
+function chapterTwelveSixty(){
+    if (chapterTwelveSpear){
+        document.getElementById('choice-12-60').style.display = 'block';
+    } else {    
+        document.getElementById('choice-12-61').style.display = 'block';
+    }
+}
+function chapterTwelveSixtyTwo(){
+    document.getElementById('choice-12-62').style.display = 'block';
+}
+function chapterTwelveSixtyThree(){
+    document.getElementById('choice-12-63').style.display = 'block';
+}
+function chapterTwelveSixtyFour(){
+    document.getElementById('choice-12-64').style.display = 'block';
+}
+function chapterTwelveSixtyFive(){
+    document.getElementById('choice-12-65').style.display = 'block';
+}
+function chapterTwelveSixtySix(){
+    document.getElementById('choice-12-66').style.display = 'block';
+}
+function chapterTwelveSixtySeven(){
+    document.getElementById('choice-12-67').style.display = 'block';
+}
+function chapterTwelveSixtyEight(){
+    document.getElementById('choice-12-68').style.display = 'block';
+}
 //----end of chapter----
