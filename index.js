@@ -28,6 +28,9 @@ var chapterTwelveSpear = false;
 //if I get bored this summer I'll re-engineer something cleaner
 function hideAll(){
     document.getElementById('start-window').style.display = 'none';
+    document.getElementById('end-window').style.display = 'none';
+    document.getElementById('killPigEnding').style.display = 'none';
+    document.getElementById('tsunamiEnding').style.display = 'none';
     document.getElementById('choice-1').style.display = 'none';
     document.getElementById('choice-1-1').style.display = 'none';
     document.getElementById('choice-1-2').style.display = 'none';
@@ -283,6 +286,14 @@ function chapterTwelve(){
         document.getElementById('choice-12-34').style.display = 'block';
     }
 }
+function gameEnd(){
+    //hide all elements
+    hideAll();
+    //insert the result into the end screen
+    document.getElementById('insertFinalResultHere').innerHTML = valueCheck();
+    //display the end scren
+    document.getElementById('end-window').style.display = 'block';
+}
 //main program
 //start by hiding all elements
 hideAll();
@@ -323,8 +334,7 @@ function dontPickUpShell(){
     chapterOneClean();
 }
 function killThePig(){
-    console.log('nothing here yet'); //TODO: implement ending screen here
-    chapterOneClean();
+    document.getElementById('killPigEnding').style.display = 'block';
 }
 function dontKillThePig(){
     jackCounter = jackCounter + 1;

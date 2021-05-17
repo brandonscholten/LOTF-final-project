@@ -20,6 +20,15 @@
             </div>
         </div>
     </div>
+    <div class="container" id="end-window">
+        <div class="row">
+            <div class="col">
+                <h1>FIN~</h1>
+                <p>Your route reflected the following character the most:</p>
+                <p id="insertFinalResultHere"></p>
+            </div>
+        </div>
+    </div>
     <div class="container" id="big-boi-container">
         <div class="row" id="chapter-1-row">
             <div class="col" id="choice-1">
@@ -43,6 +52,12 @@
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="killThePig()">Kill the pig</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="dontKillThePig()">Do nothing</button>
+                </div>
+            </div>
+            <div class="col" id="killPigEnding">
+                <p>You lunge at the pig with knife in hand, ready to end its life. You trip on a branch and accidentally impale yourself.</p>
+                <div class="list-group list-gorup-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
         </div>
@@ -150,6 +165,12 @@
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixOne(true)">Join the expedition</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixOne(false)">Stay behind</button>
+                </div>
+            </div>
+            <div class="col" id="tsunamiEnding">
+                <p>You stay behind on the beach. The last thing you see in a mile high wave approaching the shore.</p>
+                <div class="list0-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-6-1">
@@ -783,7 +804,7 @@
             <div class="col" id="choice-12-22">
                 <p>You lunge forward in a circle with the rest of you hunters. The beast is applauding you as you plunge your spears into the center. No one will oppose your rule now, the beast lives forever.</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-group-item-action" onclick="">Continue</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-12-23">
@@ -831,7 +852,7 @@
             <div class="col" id="choice-12-30">
                 <p>You are both frozen in place. Nothing feels real anymore. How could you have done this?</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-group-item-action" onclick="">Continue</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-12-31">
@@ -849,7 +870,7 @@
             <div class="col" id="choice-12-33">
                 <p>For the first time in months you are paralized by the disappointment of an adult. Life on this island is over, but you will never forget this expereince.</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-gorup-item-action" onclick="">Continue</button>
+                    <button type="button" class="list-group-item list-gorup-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-12-34">
@@ -881,7 +902,7 @@
             <div class="col" id="choice-12-38">
                 <p>You hear a scream from the depths of the jungle and a spear finds its home in your torso. Everything fades away as the tribe begins its chant.</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-group-item-action" onclick="">Continue</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-12-39">
@@ -943,7 +964,7 @@
             <div class="col" id="choice-12-48">
                 <p>You awaken to the screams of the tribe. Instantly you feel the pain of what seems like a thousand spears, and then nothing.</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-group-item-action" onclick="">Continue</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-12-49">
@@ -980,7 +1001,7 @@
             <div class="col" id="choice-12-54">
                 <p>You awaken to the screams of the tribe. Instantly you feel the pain of what seems like a thousand spears, and then nothing.</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-group-item-action" onclick="">Continue</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-12-55">
@@ -1028,7 +1049,7 @@
             <div class="col" id="choice-12-62">
                 <p>If only you had a spear...</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-group-item-action" onclick="">Continue</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-12-63">
@@ -1065,7 +1086,7 @@
                 <p>"I guess you didn’t become a place for 'Flies' because the 'Lord' has saved you! YOU WON!"</p>
                 <p>-Minh Le, 2021</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-group-item-action" onclick="">Continue</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
         </div>
