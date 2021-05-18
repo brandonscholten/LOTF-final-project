@@ -273,7 +273,6 @@ function chpaterNine(majority){
 }
 function chapterTen(){
     //hide all extra paragraphs
-    document.getElementById('punishment').style.display = 'none';
     document.getElementById('chapterTenPiggyDenial').style.display = 'none';
     document.getElementById('chapterTenRalphRemorse').style.display = 'none';
     document.getElementById('chapterTenPiggyJumped').style.display = 'none';
@@ -671,7 +670,7 @@ function chapterTenOne(){
 }
 function chapterTenTwo(punish, assign, hunt){
     //make sure punishment paragraph in 10-2 is hidden (to be shown onsubmit)
-    document.getElementById('punishment').style.display = 'none';
+    //document.getElementById('punishment').style.display = 'none';
     //make sure 10-2, 10-3, and 10-4 are hidden
     document.getElementById('choice-10-2').style.display = 'none';
     document.getElementById('choice-10-3').style.display = 'none';
@@ -808,16 +807,19 @@ function chapterTenEighteen(){
 //onsubmit functions
 function nameCave(){
     //get the value of caveName and insert it into all elements with the ID of insertCaveNameHere
-    document.getElementById('insertCaveNameHere').innerHTML = document.getElementById('caveName').value;
+    document.getElementById('insertCaveNameHere').innerHTML ='Assign guards to '+document.getElementById('caveName').value;
+    document.getElementById('insertCaveNameHere2').innerHTML = 'You reach the old shelters. You and the two boys you brought along smash through the poorly built structures looking for the weirdo with glasses. Eventually you aquire what you came for and leave to return to '+document.getElementById('caveName').value+'.';
+    document.getElementById('insertCaveNameHere3').innerHTML = "As you approach "+document.getElementById('caveName').value+" you notice the two outsiders have returned, probably for that weirdo's glasses. You won't comply with their demands. Quite honeslty, you would rather kill them. One of them calls you a theif. You decide that right then that these two outsiders will not be leaving the island alive.";
+    document.getElementById('insertCaveNameHere4').innerHTML = "You eventually find a pig to slaughter. It isn't enough to satisfy you anymore. You head back to "+document.getElementById('caveName').value+" with the pig. You are informed that the boy has eescapted this thicket while you were gone. You are enraged but excited since this new target may finally satisfy your unending desire to kill.";
 }
 function beatChild(){
     //get the value of victimInput and insert it into all elements with the ID of insertVictimHere
-    document.getElementById('insertVictimHere').innerHTML = document.getElementById('victimInput').value;
-    //show punishment paragraph
-    document.getElementById('punishment').style.display = 'block';
+    document.getElementById('punishment').innerHTML = 'You order the hunters to take '+document.getElementById('victimInput').value+' and tie them to a rock. You begin a furious series of blows until you are satisfied.' ;
+    document.getElementById('insertVictimHere2').innerHTML = 'The boy who spoke out suffers the same fate as '+document.getElementById('victimInput').value+'. The others are too fearful to dare act out again. After all, the beast is dead and no one would dare object to this conclusion.';
 }
 function assignGuards(){
-    console.log('This literally does nothing lmao');
+    //put the guard names and cave name in the appropriate element
+    document.getElementById('insertHunters').innerHTML = 'You, '+document.getElementById('guard_1').value+' and '+document.getElementById('guard_2').value+' are out in the forest hunting. You see a pig and kill it. You and the other carry the dead meat back to '+document.getElementById('caveName').value+'.';
 }
 //----end of chapter----
 //----Chapter 11----

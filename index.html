@@ -439,7 +439,7 @@
                 <p>As chief of the hunters you must decide on the next course of actioon to take.</p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" id="firstLoopPunish" onclick="chapterTenTwo(true, false, false)">Display your power by punishing someone</button>
-                    <button type="button" class="list-group-item list-group-item-action" id="firstLoopAssign" onclick="chapterTenTwo(false, true, true)">Assign guards to <p id="insertCaveNameHere"></p></button>
+                    <button type="button" class="list-group-item list-group-item-action" id="firstLoopAssign" onclick="chapterTenTwo(false, true, true)"><p id="insertCaveNameHere"></p></button>
                     <button type="button" class="list-group-item list-group-item-action" id="firstLoopHunt" onclick="chapterTenTwo(false, false, true)">Plan a hunt</button>
                 </div>
             </div>
@@ -449,7 +449,7 @@
                     <input type="text" class="form-control" placeholder="victim" aria-label="victim" aria-describedby="basic-addon1" id="victimInput">
                     <button type="button" class="btn btn-primary" onclick="beatChild()">Submit</button>
                 </form>
-                <p id="punishment">You order the hunters to take </p> <p id="insertVictimHere"></p> <p id="punishment">and tie them to a rock. You begin a furious series of blows until you are satisfied.</p>
+                <p id="punishment"></p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenTwo(false, false, false)">Continue</button>
                 </div>
@@ -457,8 +457,8 @@
             <div class="col" id="choice-10-3">
                 <p>A fortress needs guards. You decide to assign two people to guard to cave.</p>
                 <form name="selectGuardForm">
-                    <input type="text" class="form-control" placeholder="guard 1" aria-label="guard_1" aria-describedby="basic-addon1" name="guard_1">
-                    <input type="text" class="form-control" placeholder="guard 2" aria-label="guard_2" aria-describedby="basic-addon1" name="guard_2">
+                    <input type="text" class="form-control" placeholder="guard 1" aria-label="guard_1" aria-describedby="basic-addon1" id="guard_1">
+                    <input type="text" class="form-control" placeholder="guard 2" aria-label="guard_2" aria-describedby="basic-addon1" id="guard_2">
                     <button type="button" class="btn btn-primary" onclick="assignGuards()">Submit</button>
                 </form>
                 <div class="list-group list-group-flush">
@@ -491,7 +491,7 @@
                 </div>
             </div>
             <div class="col" id="choice-10-8">
-                <p>They boy who spoke out suffers the same fate as <p id="insertVictimHere"></p>. The others are too fearful to dare act out again. After all, the beast is dead and no one would dare object to this conclusion.</p>
+                <p id="insertVictimHere2"></p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenNine()">Continue</button>
                 </div>
@@ -515,7 +515,7 @@
                 </div>
             </div>
             <div class="col" id="choice-10-12">
-                <p>You reach the old shelters. You and the two boys you brought along smash through the poorly built structures looking for the weirdo with glasses. Eventually you aquire what you came for and leave to return to <p id="insertCaveNameHere"></p>.</p>
+                <p id="insertCaveNameHere2"></p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterTenEnd()">Continue</button>
                 </div>
@@ -581,13 +581,13 @@
         </div>
         <div class="row" id="chapter-11-row">
             <div class="col" id="choice-11">
-                <p>You, </p><p id="insetHunterOneHere"></p><p> and </p><p id="insertHunterTwoHere"></p><p> are out in the forest hunting. You see a pig and kill it. You and the other carry the dead meat back to </p><p id="insertCaveNameHere"></p>
+                <p id="insertHunters"></p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenOne()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-11-1">
-                <p>As you approach </p><p id="insertCaveNameHere"></p><p> you notice the two outsiders have returned, probably for that weirdo's glasses. You won't comply with their demands. Quite honeslty, you would rather kill them. One of them calls you a theif. You decide that right then that these two outsiders will not be leaving the island alive.</p>
+                <p id="insertCaveNameHere3"></p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenTwo()">Order them to be captured so you may kill them both at once.</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterElevenThree()">Kill the boy who called you a thief.</button>
@@ -833,7 +833,7 @@
                 </div>
             </div>
             <div class="col" id="choice-12-18">
-                <p>You eventually find a pig to slaughter. It isn't enough to satisfy you anymore. You head back to </p><p id="insertCaveNameHere"></p><p> with the pig. You are informed that the boy has eescapted this thicket while you were gone. You are enraged but excited since this new target may finally satisfy your unending desire to kill.</p>
+                <p id="insertCaveNameHere4"></p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterTwelveNineteen()">Continue</button>
                 </div>
@@ -854,7 +854,7 @@
                 <p>The exhausted boy falls onto the sand.</p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterTwelveTwentyTwo()">kill</button>
-                    <button type="button" class="list-gorup-item list-group-item-action" onclick="chapterTwelveTwentyThree()">stop</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterTwelveTwentyThree()">stop</button>
                 </div>
             </div>
             <div class="col" id="choice-12-22">
