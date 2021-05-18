@@ -33,11 +33,14 @@ function hideAll(){
     document.getElementById('end-window').style.display = 'none';
     document.getElementById('killPigEnding').style.display = 'none';
     document.getElementById('tsunamiEnding').style.display = 'none';
+    document.getElementById('chapterSixRevisionOne').style.display = 'none';
     document.getElementById('chapterSevenRevisionOne').style.display = 'none';
     document.getElementById('chapterSevenRevisionTwo').style.display = 'none';
     document.getElementById('chapterSevenRevisionThree').style.display = 'none';
     document.getElementById('chapterSevenRevisionFour').style.display = 'none';
     document.getElementById('chapterSevenRevisionFive').style.display = 'none';
+    document.getElementById('chapterSevenRevisionSix').style.display = 'none';
+    document.getElementById('chapterSevenRevisionSeven').style.display = 'none';
     document.getElementById('choice-1').style.display = 'none';
     document.getElementById('choice-1-1').style.display = 'none';
     document.getElementById('choice-1-2').style.display = 'none';
@@ -74,6 +77,7 @@ function hideAll(){
     document.getElementById('choice-8-7').style.display = 'none';
     document.getElementById('choice-8-8').style.display = 'none';
     document.getElementById('choice-8-9').style.display = 'none';
+    document.getElementById('choice-8-10').style.display = 'none';
     document.getElementById('choice-9').style.display = 'none';
     document.getElementById('choice-9-1').style.display = 'none';
     document.getElementById('choice-9-2').style.display = 'none';
@@ -597,15 +601,11 @@ function chapterEightSeven(){
     } else if (valueCheck() == 'Piggy'){
         document.getElementById('choice-8-8').style.display = 'block';
     } else {
-        console.log('nothing written for Simon yet');
+        document.getElementById('choice-8-10').style.display = 'block';
     }
 }
 function chapterEightNine(){
-    if (valueCheck() == 'Simon'){
-        document.getElementById('choice-8-10').style.display = 'block';
-    } else {
-        document.getElementById('choice-8-9').style.display = 'block';
-    }
+    document.getElementById('choice-8-9').style.display = 'block';
 }
 function chapterEightEnd(){
     hideAll();
