@@ -163,14 +163,21 @@
             <div class="col" id="choice-6">
                 <p>You are aoken to the sound of the conch. During the meeting the firewatchers tell a frightening narrative about their near encounter with the beast. Hysteria sets in among the group. It is suggested that there should be an expedition to find the beast.</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixOne(true)">Join the expedition</button>
-                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixOne(false)">Stay behind</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixOne(true, false)">Join the expedition</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixOne(false, true)">Stay behind</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSixOne(false, false)">Vent your frustrations to the boulders</button>
                 </div>
             </div>
             <div class="col" id="tsunamiEnding">
                 <p>You stay behind on the beach. The last thing you see in a mile high wave approaching the shore.</p>
                 <div class="list0-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="chapterSixRevisionOne">
+                <p>You stay behind and account for the boys.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSeven()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-6-1">
@@ -190,6 +197,37 @@
             </div>
         </div>
         <div class="row" id="chapter-7-row">
+            <div class="col" id="chapterSevenRevisionOne">
+                <p>The boys have been gone for a while, you wonder what is happening and if everything is ok. You are beginning to feel boredom set in.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenRevisionTwo()">tell a story</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenRevisionThree()">suffer</button>
+                </div>
+            </div>
+            <div class="col" id="chapterSevenRevisionTwo">
+                <p>You think of a story to tell the other boys. You get too caught up in the story to realize that no one cares.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenRevisionFour()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="chapterSevenRevisionThree">
+                <p>You are so LAZY that you can't bring yourself to do anything.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenRevisionFour()">Continue</button>
+                </div>  
+            </div>
+            <div class="col" id="chapterSevenRevisionFour">
+                <p>It's getting dark and the expedition still isn't over. One boy emerges from the forest and tells you that the group is headed to the mountain top in an attempt to find the beast and should be back soon.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenRevisionFive()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="chapterSevenRevisionFive">
+                <p>After a while longer, the group returns with terried looks on their faces.</p>
+                <div class="list-group list-group-item">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenEnd()">Continue</button>
+                </div>
+            </div>
             <div class="col" id="choice-7">
                 <p>After it is discovered that there is no beast in the case, the group decides to go to the mountain to try and find the beast. Along the way the bloodthirsty group reinacts the slauter of a pig, leaving one of the boys very traumatized.</p>
                 <div class="list-group list-group-flush">
@@ -215,6 +253,18 @@
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenFour(true)">Go back to check on the younger children</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenFour(false)">Send someone else to go back.</button>
+                </div>
+            </div>
+            <div class="col" id="chapterSevenRevisionSix">
+                <p>You think it's a good idea to go back and let the others know what's going on, but the real reason is because you would like some alone time.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenRevisionSeven()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="chapterSevenRevisionSeven">
+                <p>When you get back to the beach you tell everyone about the expedition.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterSevenEnd()">Continue</button>
                 </div>
             </div>
             <div class="col" id="choice-7-4">
@@ -295,6 +345,12 @@
             </div>
             <div class="col" id="choice-8-9">
                 <p>While the remainder of the group sits around the fire, you discuss the bleak situation you face. The aparrant leader of the other group and osme of his followers abmush you and steal fire. It is proclaimed that there will be a feast at the cave and that anyone is welcome to join.</p>
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="chapterEightEnd()">Continue</button>
+                </div>
+            </div>
+            <div class="col" id="choice-8-10">
+                <p>After helping out with the fire, you sneak out to your hiding spot in the jungle. Here you find a pig's decapitated head on a stick. You feel it's presence as it begins speaking to you as you fade out of reality.</p>
                 <div class="list-group list-group-flush">
                     <button type="button" class="list-group-item list-group-item-action" onclick="chapterEightEnd()">Continue</button>
                 </div>
@@ -657,7 +713,7 @@
             <div class="col" id="choice-11-21">
                 <p>It's over for you. You have been slaughtered in the name of the beast. The boulder crushes your body before you even fall over the ledge. You hit the ground with a crack which sends the contents of your head into the elements. There is no logic here.</p>
                 <div class="list-group list-group-flush">
-                    <button type="button" class="list-group-item list-group-item-action" onclick="">Continue</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="gameEnd()">Continue</button>
                 </div>
             </div>
         </div>

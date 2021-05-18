@@ -11,6 +11,8 @@ var chapterTwoAwait = false;
 //these are set in chapters three and four
 var chapterThreeWork = false;
 var chapterFourBeach = false;
+//variables for chapter six
+var chapterSixStayBehind = false;
 //booleans for the first loop in chpater ten
 //variables are set in chapter ten
 var chapterTenPunish = false;
@@ -31,6 +33,11 @@ function hideAll(){
     document.getElementById('end-window').style.display = 'none';
     document.getElementById('killPigEnding').style.display = 'none';
     document.getElementById('tsunamiEnding').style.display = 'none';
+    document.getElementById('chapterSevenRevisionOne').style.display = 'none';
+    document.getElementById('chapterSevenRevisionTwo').style.display = 'none';
+    document.getElementById('chapterSevenRevisionThree').style.display = 'none';
+    document.getElementById('chapterSevenRevisionFour').style.display = 'none';
+    document.getElementById('chapterSevenRevisionFive').style.display = 'none';
     document.getElementById('choice-1').style.display = 'none';
     document.getElementById('choice-1-1').style.display = 'none';
     document.getElementById('choice-1-2').style.display = 'none';
@@ -242,7 +249,11 @@ function chapterSix(){
     document.getElementById('choice-6').style.display = 'block';
 }
 function chapterSeven(){
-    document.getElementById('choice-7').style.display = 'block';
+    if (chapterSixStayBehind){
+        document.getElementById('chapterSevenRevisionOne').style.display = 'block';
+    } else {
+        document.getElementById('choice-7').style.display = 'block';
+    }
 }
 function chapterEight(){
     document.getElementById('choice-8').style.display = 'block';
@@ -464,16 +475,20 @@ function chapterSixCleanUp(){
     chapterSeven();
 }
 //onclick functions
-function chapterSixOne(join){
+function chapterSixOne(join, stay){
     if (join){
         ralphCounter = ralphCounter + 1;
         jackCounter = jackCounter + 1;
         simonCounter = simonCounter + 1;
-    } else {
+        document.getElementById('choice-6-1').style.display = 'block';
+    } else if (stay){
         piggyCounter = piggyCounter + 1;
-        //TODO: add ending here
+        document.getElementById('chapterSixRevisionOne').style.display = 'block';
+        chapterSixStayBehind = true;
+    } else {
+        simonCounter = simonCounter + 1;
+        document.getElementById('tsunamiEnding').style.display = 'block';
     }
-    document.getElementById('choice-6-1').style.display = 'block';
 }
 function chapterSixTwo(go){
     if (go){
@@ -507,8 +522,12 @@ function chapterSevenThree(){
     document.getElementById('choice-7-3').style.display = 'block';
 }
 function chapterSevenFour(go){
-    if (go){simonCounter = simonCounter + 1;}
-    document.getElementById('choice-7-4').style.display = 'block';
+    if (go){
+        simonCounter = simonCounter + 1;
+        document.getElementById('chapterSevenRevisionSix').style.display = 'block';
+    } else {
+        document.getElementById('choice-7-4').style.display = 'block';
+    }
 }
 function chapterSevenFive(go, wait){
     if (go){
@@ -529,6 +548,25 @@ function chapterSevenSix(go, send){
 function chapterSevenEnd(){
     hideAll();
     chapterEight();
+}
+//revision onclick functions
+function chapterSevenRevisionOne(){
+    document.getElementById('chapterSevenRevisionOne').style.display = 'block';
+}
+function chapterSevenRevisionTwo(){
+    document.getElementById('chapterSevenRevisionTwo').style.display = 'block';
+}
+function chapterSevenRevisionThree(){
+    document.getElementById('chapterSevenRevisionThree').style.display = 'block';
+}
+function chapterSevenRevisionFour(){
+    document.getElementById('chapterSevenRevisionFour').style.display = 'block';
+}
+function chapterSevenRevisionFive(){
+    document.getElementById('chapterSevenRevisionFive').style.display = 'block';
+}
+function chapterSevenRevisionSeven(){
+    document.getElementById('chapterSevenRevisionSeven').style.display = 'block';
 }
 //----end of chapter----
 //----Chapter 8----
@@ -563,7 +601,11 @@ function chapterEightSeven(){
     }
 }
 function chapterEightNine(){
-    document.getElementById('choice-8-9').style.display = 'block';
+    if (valueCheck() == 'Simon'){
+        document.getElementById('choice-8-10').style.display = 'block';
+    } else {
+        document.getElementById('choice-8-9').style.display = 'block';
+    }
 }
 function chapterEightEnd(){
     hideAll();
@@ -847,7 +889,7 @@ function chapterElevenTwenty(){
     document.getElementById('choice-11-20').style.display = 'block';
 }
 function chapterElevenTwentyOne(){
-    document.getElementById('choice-11-20').style.display = 'block';
+    document.getElementById('choice-11-21').style.display = 'block';
 } //TODO add piggy ending
 //----end of chapter----
 //----Chapter 12----
@@ -991,7 +1033,7 @@ function chapterTwelveFortyFour(){
 function chapterTwelveFortyFive(){
     document.getElementById('choice-12-45').style.display = 'block';
 }
-function chpaterTwelveFortySix(){
+function chapterTwelveFortySix(){
     document.getElementById('choice-12-46').style.display = 'block';
 }
 function chapterTwelveFortySeven(){
