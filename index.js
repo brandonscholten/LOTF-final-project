@@ -858,8 +858,23 @@ function chapterTwelve(){
 function gameEnd(){
     //hide all elements
     hideAll();
+    //hide pics
+    document.getElementById('RalphPic').style.display = 'none';
+    document.getElementById('PiggyPic').style.display = 'none';
+    document.getElementById('SimonPic').style.display = 'none';
+    document.getElementById('JackPic').style.display = 'none';
     //insert the result into the end screen
     document.getElementById('insertFinalResultHere').innerHTML = valueCheck();
+    //show the appropriate image
+    if (valueCheck() == 'Ralph'){
+        document.getElementById('RalphPic').style.display = 'block';
+    } else if (valueCheck() == 'Piggy'){
+        document.getElementById('PiggyPic').style.display = 'block';
+    } else if (valueCheck() == 'Simon'){
+        document.getElementById('SimonPic').style.display = 'block';
+    } else if (valueCheck() == 'Jack'){
+        document.getElementById('JackPic').style.display = 'block';
+    }
     //display the end scren
     document.getElementById('end-window').style.display = 'block';
 }
