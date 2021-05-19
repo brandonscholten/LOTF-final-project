@@ -13,7 +13,7 @@ var chapterThreeWork = false;
 var chapterFourBeach = false;
 //variables for chapter six
 var chapterSixStayBehind = false;
-//booleans for the first loop in chpater ten
+//booleans for the first loop in chapter ten
 //variables are set in chapter ten
 var chapterTenPunish = false;
 var chapterTenAssign = false;
@@ -26,7 +26,7 @@ var scissors = false;
 //variables for chapter 12
 var chapterTwelveSpear = false;
 //function to hide all elements on the screen
-//this is fuckiing stupid please ignore the next hundred or so lines of this shit
+//this is [redacted] stupid please ignore the next hundred or so lines of this [redacted]
 //if I get bored this summer I'll re-engineer something cleaner
 function hideAll(){
     document.getElementById('start-window').style.display = 'none';
@@ -329,7 +329,7 @@ function disableButtons(choice){
             break;
         case '7-4':
             document.getElementById('button57').disabled = true;
-            document.getElementById('buttun58').disabled = true;
+            document.getElementById('button58').disabled = true;
             break;
         case '7-5':
             document.getElementById('button59').disabled = true;
@@ -758,7 +758,7 @@ function disableButtons(choice){
     }
 }
 function valueCheck(){
-    //checks for the highest counter and returns a string indicating the histest value
+    //checks for the highest counter and returns a string indicating the highest value
     var largest = Math.max(jackCounter, ralphCounter, simonCounter, piggyCounter);
     if (largest == jackCounter){
         return 'Jack';
@@ -817,7 +817,7 @@ function chapterSeven(){
 function chapterEight(){
     document.getElementById('choice-8').style.display = 'block';
 }
-function chpaterNine(majority){
+function chapterNine(majority){
     if (majority == 'Jack'){
         document.getElementById('choice-9').style.display = 'block';
     } else if (majority == 'Simon'){
@@ -875,7 +875,7 @@ function gameEnd(){
     } else if (valueCheck() == 'Jack'){
         document.getElementById('JackPic').style.display = 'block';
     }
-    //display the end scren
+    //display the end screen
     document.getElementById('end-window').style.display = 'block';
 }
 //main program
@@ -979,7 +979,7 @@ function chapterThreeTwo(){
     disableButtons('3-1');
 }
 function chapterThreeCounter(hunting, huts, explore){
-    //add points if true is passed for any of the paranmeters
+    //add points if true is passed for any of the parameters
     //cleanup and run the next chapter
     if (hunting){
         jackCounter = jackCounter + 1;
@@ -1011,7 +1011,7 @@ function chapterFourTwo(){
     disableButtons('4-1');
     //add points for ralph and piggy
     //run valueCheck
-    //piggy alt scinerio
+    //piggy alt scenario
     //cleanup will be ran when the user clicks continue
     ralphCounter = ralphCounter + 1;
     piggyCounter = piggyCounter + 1;
@@ -1021,7 +1021,7 @@ function chapterFourTwo(){
 }
 function chapterFourHunt(){
     //add point to jack counter
-    //run chapter clearnup
+    //run chapter cleanup
     jackCounter = jackCounter +1;
     chapterFourCleanup();
 }
@@ -1214,12 +1214,12 @@ function chapterEightNine(){
 }
 function chapterEightEnd(){
     hideAll();
-    chpaterNine(valueCheck());
+    chapterNine(valueCheck());
 }
 //----end of chapter----
 //----Chapter 9----
 //onclick functions
-function chapterNineEnd(){ //TOBO: build simon ending
+function chapterNineEnd(){ 
     hideAll();
     chapterTen(); 
 }
@@ -1292,9 +1292,9 @@ function chapterTenTwo(punish, assign, hunt){
     document.getElementById('choice-10-4').style.display = 'none';
     //show choice-10-1 (no harm done on first run when its already visible)
     document.getElementById('choice-10-1').style.display = 'block';
-    //run chpaterTenFirstLoop function to elminate used options or move to next question
+    //run chapterTenFirstLoop function to eliminate used options or move to next question
     chapterTenFirstLoop(); 
-    //if a parameter is set to true, flip its corresponding boolean to true, hide choice-10-1, and then show its corresponding scinerio
+    //if a parameter is set to true, flip its corresponding boolean to true, hide choice-10-1, and then show its corresponding scenario
     if (punish){
         chapterTenPunish = true;
         document.getElementById('choice-10-1').style.display = 'none';
@@ -1376,7 +1376,7 @@ function rockPaperScissorsMain(rock, paper, scissors){
     } else if (random == 2){
         computerSelection = 'paper';
     } else if (random == 3){
-        computerSelection = 'schissors';
+        computerSelection = 'scissors';
     }
     //translate human selection to string
     if (rock){
@@ -1435,9 +1435,9 @@ function chapterTenEighteen(){
 function nameCave(){
     //get the value of caveName and insert it into all elements with the ID of insertCaveNameHere
     document.getElementById('insertCaveNameHere').innerHTML ='Assign guards to '+document.getElementById('caveName').value;
-    document.getElementById('insertCaveNameHere2').innerHTML = 'You reach the old shelters. You and the two boys you brought along smash through the poorly built structures looking for the weirdo with glasses. Eventually you aquire what you came for and leave to return to '+document.getElementById('caveName').value+'.';
-    document.getElementById('insertCaveNameHere3').innerHTML = "As you approach "+document.getElementById('caveName').value+" you notice the two outsiders have returned, probably for that weirdo's glasses. You won't comply with their demands. Quite honeslty, you would rather kill them. One of them calls you a theif. You decide that right then that these two outsiders will not be leaving the island alive.";
-    document.getElementById('insertCaveNameHere4').innerHTML = "You eventually find a pig to slaughter. It isn't enough to satisfy you anymore. You head back to "+document.getElementById('caveName').value+" with the pig. You are informed that the boy has eescapted this thicket while you were gone. You are enraged but excited since this new target may finally satisfy your unending desire to kill.";
+    document.getElementById('insertCaveNameHere2').innerHTML = 'You reach the old shelters. You and the two boys you brought along smash through the poorly built structures looking for the weirdo with glasses. Eventually you acquire what you came for and leave to return to '+document.getElementById('caveName').value+'.';
+    document.getElementById('insertCaveNameHere3').innerHTML = "As you approach "+document.getElementById('caveName').value+" you notice the two outsiders have returned, probably for that weirdo's glasses. You won't comply with their demands. Quite honestly, you would rather kill them. One of them calls you a thief. You decide that right then that these two outsiders will not be leaving the island alive.";
+    document.getElementById('insertCaveNameHere4').innerHTML = "You eventually find a pig to slaughter. It isn't enough to satisfy you anymore. You head back to "+document.getElementById('caveName').value+" with the pig. You are informed that the boy has escaped this thicket while you were gone. You are enraged but excited since this new target may finally satisfy your unending desire to kill.";
 }
 function beatChild(){
     //get the value of victimInput and insert it into all elements with the ID of insertVictimHere
@@ -1454,7 +1454,7 @@ function chapterElevenEnd(){
     hideAll();
     chapterTwelve();
 }
-//onclick functinns
+//onclick functions
 function chapterElevenOne(){
     document.getElementById('choice-11-1').style.display = 'block';
     disableButtons('11');
@@ -1560,6 +1560,7 @@ function chapterTwelveFour(){
     disableButtons('12-3')
 }
 function chapterTwelveFive(){
+    hideAll();
     document.getElementById('choice-12-5').style.display = 'block';
     disableButtons('12-4');
 }
@@ -1573,6 +1574,7 @@ function chapterTwelveSeven(){
     disableButtons('12-6');
 }
 function chapterTwelveEight(){
+    hideAll();
     document.getElementById('choice-12-8').style.display = 'block';
     disableButtons('12-7');
 }
@@ -1618,6 +1620,7 @@ function chapterTwelveEighteen(){
     disableButtons('12-16');
 }
 function chapterTwelveNineteen(){
+    hideAll();
     document.getElementById('choice-12-19').style.display = 'block';
     disableButtons('12-14');
     disableButtons('12-17');
