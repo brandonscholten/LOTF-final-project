@@ -1,6 +1,18 @@
 body{
-    background-color: lightgoldenrodyellow;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('jungle.jpg');
+    background-position:center top;
+    height:350px;
+    color: white;
 }
 .container{
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.list-group{
+    padding-bottom: 30px;
+    width: 420px;
+}
+.btn{
+    margin-bottom: 30px;
 }
