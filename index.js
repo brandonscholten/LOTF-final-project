@@ -1513,6 +1513,7 @@ function chapterElevenThirteen(){
 function chapterElevenFourteen(){
     document.getElementById('choice-11-14').style.display = 'block';
     disableButtons('11-13');
+    hideAll();
 }
 function chapterElevenFifteen(){
     document.getElementById('choice-11-15').style.display = 'block';
@@ -1655,10 +1656,10 @@ function chapterTwelveTwentyFive(){
 }
 function chapterTwelveTwentySix(){
     //generate a random number 1 or 2
-    var random = Math.floor(Math.random() * (2 - 1)) + 1;
+    var random = Math.floor(Math.random() * (4 - 1)) + 1;
     if (random == 1){
         document.getElementById('choice-12-26').style.display = 'block';
-    } else if (random == 2){
+    } else if (random > 1){
         document.getElementById('choice-12-31').style.display = 'block';
     }
     disableButtons('12-25');
@@ -1733,6 +1734,7 @@ function chapterTwelveFortyFour(){
 function chapterTwelveFortyFive(){
     document.getElementById('choice-12-45').style.display = 'block';
     disableButtons('12-44');
+    hideAll();
 }
 function chapterTwelveFortySix(){
     document.getElementById('choice-12-46').style.display = 'block';
@@ -1753,6 +1755,7 @@ function chapterTwelveFortyNine(){
 function chapterTwelveFifty(){
     document.getElementById('choice-12-50').style.display = 'block';
     disableButtons('12-49');
+    hideAll();
 }
 function chapterTwelveFiftyOne(){
     document.getElementById('choice-12-51').style.display = 'block';
@@ -1781,6 +1784,7 @@ function chapterTwelveFiftySix(){
 function chapterTwelveFiftySeven(){
     document.getElementById('choice-12-57').style.display = 'block';
     disableButtons('12-56');
+    hideAll();
 }
 function chapterTwelveFiftyEight(){
     document.getElementById('choice-12-58').style.display = 'block';
@@ -1805,6 +1809,7 @@ function chapterTwelveSixtyTwo(){
 function chapterTwelveSixtyThree(){
     document.getElementById('choice-12-63').style.display = 'block';
     disableButtons('12-60');
+    hideAll();
 }
 function chapterTwelveSixtyFour(){
     document.getElementById('choice-12-64').style.display = 'block';
@@ -1817,6 +1822,7 @@ function chapterTwelveSixtyFive(){
 function chapterTwelveSixtySix(){
     document.getElementById('choice-12-66').style.display = 'block';
     disableButtons('12-65');
+    hideAll();
 }
 function chapterTwelveSixtySeven(){
     document.getElementById('choice-12-67').style.display = 'block';
