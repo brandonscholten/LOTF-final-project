@@ -754,7 +754,7 @@ function disableButtons(choice){
         case '12-67':
             document.getElementById('button219').disabled = true;
         case '12-68':
-            document.getElementById('button220').disabled = true;
+            document.getElementById('button220').disabled = false;
     }
 }
 function valueCheck(){
